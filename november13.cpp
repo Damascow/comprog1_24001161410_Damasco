@@ -2,92 +2,61 @@
 using namespace std;
 
 int main() {
-    std::cout << "Hello, I am zhi !!! Welcome to my first C++ application \n";
-    std::string x;
+    std::cout << "Hello, I am Zhi!!! Welcome to my first C++ application \n";
+    std::string name;
     std::cout << "Hey! What is your name? ";
-    std::cin >> x;
-    std::cout << "Good Day " << x; 
-    std::cout << "! It's nice to meet you\n";
-    
+    std::cin >> name;
+    std::cout << "Good Day " << name << "! It's nice to meet you\n";
+
     int month;
     int day;
     int year;
     int leapyear = year % 4;
-    
+
     std::cout << "When is your birthday?\n";
-    std::cout << "month; ";
+    std::cout << "Month: ";
     std::cin >> month;
-    std::cout << "day; ";
+    std::cout << "Day: ";
     std::cin >> day;
-    std::cout << "year; ";
+    std::cout << "Year: ";
     std::cin >> year;
-    
-    if(year % 4 == 0)
-    std::cout<< year << "is a leap year";
-    else if(year % 4 == 0 && year % 100 !=0)
-    std::cout<< year << " is a leap year";
-    else
-    cout<< year << " is not a leap year";
-    
-    {
-    int month,date;
-    cout<<" Enter your birth month:";
-    cin>>month;
-    cout<<" Enter your birth date:";
-    cin>>date; 
-    
-    if (( month == 1 && date >= 20) || ( month == 2 && date <=18))
-    {
-         cout<<" Your zodiac sign is AQUARIUS\n";
-         
+
+
+    bool isLeapYear = (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
+    if (isLeapYear) {
+        std::cout << year << " is a leap year\n";
+    } else {
+        std::cout << year << " is not a leap year\n";
     }
-    else if (( month == 2 && date >= 19) || ( month == 3 && date <= 20))
-    {
-         cout<<" Your zodiac sign is PISCES\n";
+
+
+    if ((month == 1 && day >= 20) || (month == 2 && day <= 18)) {
+        cout << "Your zodiac sign is AQUARIUS\n";
+    } else if ((month == 2 && day >= 19) || (month == 3 && day <= 20)) {
+        cout << "Your zodiac sign is PISCES\n";
+    } else if ((month == 3 && day >= 21) || (month == 4 && day <= 19)) {
+        cout << "Your zodiac sign is ARIES\n";
+    } else if ((month == 4 && day >= 20) || (month == 5 && day <= 20)) {
+        cout << "Your zodiac sign is TAURUS\n";
+    } else if ((month == 5 && day >= 21) || (month == 6 && day <= 20)) {
+        cout << "Your zodiac sign is GEMINI\n";
+    } else if ((month == 6 && day >= 21) || (month == 7 && day <= 22)) {
+        cout << "Your zodiac sign is CANCER\n";
+    } else if ((month == 7 && day >= 23) || (month == 8 && day <= 22)) {
+        cout << "Your zodiac sign is LEO\n";
+    } else if ((month == 8 && day >= 23) || (month == 9 && day <= 22)) {
+        cout << "Your zodiac sign is VIRGO\n";
+    } else if ((month == 9 && day >= 23) || (month == 10 && day <= 22)) {
+        cout << "Your zodiac sign is LIBRA\n";
+    } else if ((month == 10 && day >= 23) || (month == 11 && day <= 21)) {
+        cout << "Your zodiac sign is SCORPIO\n";
+    } else if ((month == 11 && day >= 22) || (month == 12 && day <= 21)) {
+        cout << "Your zodiac sign is SAGITTARIUS\n";
+    } else if ((month == 12 && day >= 22) || (month == 1 && day <= 19)) {
+        cout << "Your zodiac sign is CAPRICORN\n";
+    } else {
+        cout << "INVALID INPUT\n";
     }
-    else if (( month == 3 && date >= 21) || ( month == 4 && date <= 19))
-    {
-         cout<<" Your zodiac sign is ARIES\n";
-    }
-    else if (( month == 4 && date >= 20) || ( month == 5 && date <= 20))
-    {
-         cout<<" Your zodiac sign is TAURUS\n";
-    }
-    else if (( month == 5 && date >= 21 ) || ( month == 6 && date <= 20 ))
-    {
-         cout<<" Your zodiac sign is GEMINI\n";
-    }
-    else if (( month == 6 && date >= 21 ) || ( month == 7 && date <= 22 ))
-    {
-         cout<<" Your zodiac sign is CANCER\n";
-    }
-    else if (( month == 7 && date <= 23 ) || ( month == 8 && date <= 22))
-    {
-         cout<<" Your zodiac sign is LEO\n";
-    }
-    else if (( month == 8 && date >= 23 ) || ( month == 9 && date <= 22 ))
-    {
-         cout<<" Your zodiac sign is VIRGO\n";
-    }
-    else if (( month == 9 && date >= 23 ) || ( month == 10 && date <= 22))
-    {
-         cout<<" Your zodiac sign is LIBRA\n";
-    }
-    else if (( month == 10 && date >= 23 ) || ( month == 11 && date <= 21))
-    {
-         cout<<" Your zodiac sign is SCORPIO\n";
-    }
-    else if (( month == 11 && date >= 22 ) || ( month == 12 && date <= 21))
-    {
-         cout<<" Your zodiac sign is SAGUITTARIUS\n";
-    }
-    else if (( month == 12 && date >= 22 ) || ( month == 1 && date <= 19 ))
-    {
-         cout<<" Your zodiac sign is CAPRICORN\n";
-    }
-    else
-    {
-        cout<<" INVALID INPUT";
-    }
-         system("pause");
+
+    return 0;
 }
