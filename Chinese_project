@@ -44,8 +44,9 @@ string getChineseZodiac(int year)
     return zodiacSigns[year % 12];
 }
 
-int main() {
-    cout << "Hello, I am Verra!! Welcome to my first C++ application\n";
+int main() 
+{
+    cout << "Hello, I am Zhi!! Welcome to my first C++ application\n";
     string name;
 
     cout << "Hey! What's your name? ";
@@ -84,7 +85,8 @@ int main() {
         cout << "Enter your birth year: ";
         cin >> birthYear;
 
-        if (birthYear > 0) {
+        if (birthYear > 0) 
+{
             string zodiac = getChineseZodiac(birthYear);
             cout << "Your Chinese zodiac sign is: " << zodiac << endl;
         } else {
